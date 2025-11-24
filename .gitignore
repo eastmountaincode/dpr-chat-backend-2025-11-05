@@ -25,4 +25,8 @@ logs/
 *.log
 ._*
 
+# Data storage
+data/
+!data/.gitkeep
+
 package-lock.json

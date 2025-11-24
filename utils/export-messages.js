@@ -1,7 +1,15 @@
 const io = require('socket.io-client');
 const fs = require('fs');
+const path = require('path');
 
 const PRODUCTION_SERVER = 'http://159.65.180.16:3001';
+const DATA_DIR = path.join(__dirname, '..', 'data');
+const BACKUP_FILE = path.join(DATA_DIR, 'messages-backup.json');
+
+// Ensure data directory exists
+if (!fs.existsSync(DATA_DIR)) {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+}
 
 const socket = io(PRODUCTION_SERVER);
 
@@ -18,11 +26,11 @@ socket.on('message_history', (messages) => {
 
   // Save to JSON file
   fs.writeFileSync(
-    'messages-backup.json',
+    BACKUP_FILE,
     JSON.stringify(messages, null, 2)
   );
 
-  console.log('✅ Messages saved to messages-backup.json');
+  console.log(`✅ Messages saved to ${BACKUP_FILE}`);
   process.exit(0);
 });
 

@@ -30,3 +30,4 @@ data/
 !data/.gitkeep
 
 package-lock.json
+package.json

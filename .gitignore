@@ -8,6 +8,7 @@ yarn-error.log*
 .env
 .env.local
 .env.production
+.env.development
 
 # OS files
 .DS_Store
@@ -30,4 +31,3 @@ data/
 !data/.gitkeep
 
 package-lock.json
-package.json

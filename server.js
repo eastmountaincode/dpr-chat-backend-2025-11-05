@@ -73,7 +73,8 @@ io.on('connection', (socket) => {
       id: uuidv4(),
       userId,
       username: username.trim(),
-      message: message.trim()
+      message: message.trim(),
+      timestamp: new Date().toISOString()
     };
 
     // Add to in-memory storage

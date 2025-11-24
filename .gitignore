@@ -24,3 +24,5 @@ Thumbs.db
 logs/
 *.log
 ._*
+
+package-lock.json

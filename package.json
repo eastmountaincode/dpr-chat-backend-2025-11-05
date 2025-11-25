@@ -7,13 +7,18 @@
     "start": "node server.js",
     "dev": "node -r dotenv/config server.js dotenv_config_path=.env.development"
   },
-  "keywords": ["websocket", "chat", "socket.io"],
+  "keywords": [
+    "websocket",
+    "chat",
+    "socket.io"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "socket.io": "^4.8.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
     "uuid": "^11.0.3"
   },
   "devDependencies": {
